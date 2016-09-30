@@ -1,0 +1,27 @@
+" Use Vim settings instead of Vi settings
+if &compatible
+  set nocompatible
+end
+
+" Plugins section begin
+call plug#begin('~/.vim/bundle')
+
+" Define general bundles via GitHub repos
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'christoomey/vim-sort-motion'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/syntastic'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-entire'
+
+" Define local bundles if defined
+if filereadable(expand("~/.vimrc.bundles.local"))
+  source ~/.vimrc.bundles.local
+endif
+
+call plug#end()
